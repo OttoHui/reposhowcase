@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reposhowcase"
+version = "0.1.0"
+description = "Evidence-based showcases for multi-language software repositories."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "RepoShowcase contributors"}]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/OttoHui/reposhowcase"
+Repository = "https://github.com/OttoHui/reposhowcase"
+Issues = "https://github.com/OttoHui/reposhowcase/issues"
+
+[project.optional-dependencies]
+pptx = ["python-pptx>=0.6.23"]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+reposhowcase = "reposhowcase.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
