@@ -39,7 +39,9 @@ reposhowcase build ./my-project --outputs html,pptx,mp4 --output showcase/
 ```
 
 HTML is dependency-free. PPTX requires the `pptx` extra, and MP4 requires an
-`ffmpeg` executable on `PATH`.
+`ffmpeg` executable on `PATH`. If the installed FFmpeg build does not include
+the optional `drawtext` filter, MP4 export still succeeds with clean color
+slides without text overlays.
 
 After the first PyPI release, the installation command will become:
 
